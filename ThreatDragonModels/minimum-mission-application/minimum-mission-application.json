@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "title": "minimum-mission-application",
+    "owner": "zimmele2",
+    "description": "The system is a heterogeneous vehicle system used for ocean operations. \nThe minimum application includes a command and control application, neptus, which is running on a pc onshore or from a boat.\nThe receiver of this message is the LAUV, running the onboard application DUNE. \nThe Manta is acting as a gateway and forwarding messages from neptus to DUNE.\nNeptus as well as manta and the LAUV can communicate over Wifi.\nManta and the LAUV can also communicate over acoustic channels.\nThe LAUV only supports UDP."
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "reviewer": "??"
+  }
+}
