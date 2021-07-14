@@ -516,8 +516,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.4035139389216417,
-                    "offset": -13.727304686252051
+                    "distance": 0.44624267751768704,
+                    "offset": -3.156173816976119
                   },
                   "attrs": {
                     "text": {
@@ -854,6 +854,69 @@
                   "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 410,
+                "y": 380
+              },
+              "target": {
+                "x": 740,
+                "y": 380
+              },
+              "vertices": [
+                {
+                  "x": 570,
+                  "y": 330
+                }
+              ],
+              "id": "7474d4c9-7329-4943-bdd2-1174dd15dad5",
+              "z": 26,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 660,
+                "y": 110
+              },
+              "target": {
+                "x": 930,
+                "y": 110
+              },
+              "vertices": [
+                {
+                  "x": 790,
+                  "y": 140
+                }
+              ],
+              "id": "3843cff1-d10c-41b6-a9fe-0ffeeefad4af",
+              "z": 27,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 910,
+                "y": 100
+              },
+              "target": {
+                "x": 910,
+                "y": 360
+              },
+              "vertices": [
+                {
+                  "x": 860,
+                  "y": 220
+                }
+              ],
+              "id": "48667f6a-d8d7-4afd-b498-291b9e18b559",
+              "z": 28,
+              "attrs": {}
             }
           ]
         },
