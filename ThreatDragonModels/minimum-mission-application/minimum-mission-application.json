@@ -136,7 +136,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "GPS"
+                  "text": "GPS?"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -516,8 +516,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.44624267751768704,
-                    "offset": -3.156173816976119
+                    "distance": 0.5681230455763912,
+                    "offset": 1.3610152451329538
                   },
                   "attrs": {
                     "text": {
@@ -910,8 +910,8 @@
               },
               "vertices": [
                 {
-                  "x": 860,
-                  "y": 220
+                  "x": 890,
+                  "y": 230
                 }
               ],
               "id": "48667f6a-d8d7-4afd-b498-291b9e18b559",
