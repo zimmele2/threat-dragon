@@ -938,6 +938,27 @@
               "id": "3833fe6c-bbb6-4737-a959-0a6930a16414",
               "z": 29,
               "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 440,
+                "y": 80
+              },
+              "target": {
+                "x": 440,
+                "y": 380
+              },
+              "vertices": [
+                {
+                  "x": 480,
+                  "y": 240
+                }
+              ],
+              "id": "ca252edb-3292-44b0-9a0f-28bef40f9eeb",
+              "z": 30,
+              "attrs": {}
             }
           ]
         },
