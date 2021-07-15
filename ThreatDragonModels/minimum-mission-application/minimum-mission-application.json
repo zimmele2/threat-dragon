@@ -157,9 +157,10 @@
               "id": "02d6a60b-9aba-4631-a9e0-4c62ae9734e1",
               "z": 6,
               "hasOpenThreats": false,
+              "outOfScope": true,
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
                 },
                 "text": {
                   "text": "sensor"
