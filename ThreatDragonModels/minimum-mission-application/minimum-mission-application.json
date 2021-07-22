@@ -279,12 +279,12 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.44706514317972695,
-                    "offset": -4.088800632691688
+                    "distance": 0.4920478272526269,
+                    "offset": -8.920745756631002
                   },
                   "attrs": {
                     "text": {
-                      "text": "ethernet",
+                      "text": "wifi",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -488,7 +488,12 @@
                 "x": 810,
                 "y": 280
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 870,
+                  "y": 350
+                }
+              ],
               "id": "a6eecc1a-40ab-40ad-9d90-5a5d7ed8fddf",
               "labels": [
                 {
@@ -526,7 +531,12 @@
                 "x": 780,
                 "y": 280
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 760,
+                  "y": 340
+                }
+              ],
               "id": "9fac3044-6827-41d5-bcea-47102e28330d",
               "labels": [
                 {
@@ -914,12 +924,12 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.25,
-                    "offset": -72.11102550927978
+                    "distance": 0.5333125695473365,
+                    "offset": -5.940685709309061
                   },
                   "attrs": {
                     "text": {
-                      "text": "ethernet",
+                      "text": "wifi",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -958,8 +968,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.4466661109845377,
-                    "offset": 40.08448348787914
+                    "distance": 0.5521796377270942,
+                    "offset": -44.54294685691635
                   },
                   "attrs": {
                     "text": {
