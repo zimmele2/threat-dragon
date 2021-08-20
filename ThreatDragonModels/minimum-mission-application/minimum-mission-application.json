@@ -52,16 +52,26 @@
               "angle": 0,
               "id": "b825376b-a0f5-45d8-921e-531c80b8ac3c",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "privilegeLevel": "user",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Get remote access to C&C application",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker gets full access to the C&C application and can send commands to the vehicle or monitor it."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "neptus: C&C\napplication"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -78,16 +88,26 @@
               "angle": 0,
               "id": "ca700eab-a1a6-4abd-809a-7a9d19827338",
               "z": 3,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Send invalid message",
+                  "type": "Denial of service",
+                  "description": "Send invalid message to the router and block traffic on the router.",
+                  "mitigation": "Validate the origin of the messages and drop the message if not trusted."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "manta: router"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -104,16 +124,34 @@
               "angle": 0,
               "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639",
               "z": 4,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Send invalid message",
+                  "type": "Denial of service",
+                  "description": "Send an invalid message and cause the DUNE application to crash and make the vehicle non responsive",
+                  "mitigation": "Validate the origin of the messages and drop the message if not trusted."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker is able to log into the application and might control and monitor all the data",
+                  "title": "SSH into application",
+                  "type": "Elevation of privilege",
+                  "mitigation": "Restrict ssh access by IP Address (during operation)"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "main cpu: dune"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -301,13 +339,23 @@
                 }
               ],
               "z": 11,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man in the middle attack",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "mitigation": "Encryption at message level",
+                  "type": "Information disclosure"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -385,13 +433,23 @@
                 }
               ],
               "z": 13,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man in the middle attack",
+                  "type": "Information disclosure",
+                  "description": "An attacker intercepts the acoustic connection and get access to sensitive data like mission plans (really sent over acoustic??)",
+                  "mitigation": "Encryption at the message level"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -664,16 +722,32 @@
               "angle": 0,
               "id": "94f13ec0-a252-46ef-8280-f70c51a295a9",
               "z": 31,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Send invalid message",
+                  "type": "Denial of service"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "title": "SSH into application",
+                  "description": "An attacker is able to log into the application and might control and monitor all the data",
+                  "mitigation": "Restrict ssh access by IP Address (during operation)"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "manta: dune"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -900,16 +974,26 @@
               "angle": 0,
               "id": "ad610f81-6468-4d5c-bfad-35504628d36e",
               "z": 38,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "SSH into application",
+                  "description": "An attacker is able to log into the application and might control and monitor all the data",
+                  "type": "Elevation of privilege",
+                  "mitigation": "Restrict ssh access by IP Address (during operation)"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "auxiliary cpu:\ndune"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -1010,16 +1094,25 @@
               "angle": 0,
               "id": "5f3bb63d-23fe-4e2c-9907-b93bb846ea72",
               "z": 41,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Send invalid message",
+                  "description": "Send invalid message to the switch and block traffic on the switch.",
+                  "type": "Denial of service"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "switch"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -1542,13 +1635,23 @@
                 }
               ],
               "z": 58,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man in the middle attack",
+                  "type": "Information disclosure",
+                  "description": "An attacker intercepts the acoustic connection and get access to sensitive data like mission plans (really received over acoustic??)",
+                  "mitigation": "Encryption at message level"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             }
