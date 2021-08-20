@@ -97,6 +97,14 @@
                   "type": "Denial of service",
                   "description": "Send invalid message to the router and block traffic on the router.",
                   "mitigation": "Validate the origin of the messages and drop the message if not trusted."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Log into router",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker can log into the router.",
+                  "mitigation": "Restrict access with password"
                 }
               ],
               "attrs": {
@@ -168,16 +176,26 @@
               "angle": 0,
               "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa",
               "z": 5,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "GPS spoofing",
+                  "description": "Spoof GPS data in terms of location and/or time. This can lead to misdirection of the vehicle.",
+                  "mitigation": "Check location and time shift.",
+                  "type": "Spoofing"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "GPS"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -618,16 +636,26 @@
               "angle": 0,
               "id": "e03d1d45-22d6-4fab-959c-4ae285ffb25c",
               "z": 25,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Text message spoofing",
+                  "description": "Attacker send valid command to vehicle.",
+                  "mitigation": "Restrict text message commands by numbers (during operation)",
+                  "type": "Spoofing"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "remote operator"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -737,6 +765,14 @@
                   "title": "SSH into application",
                   "description": "An attacker is able to log into the application and might control and monitor all the data",
                   "mitigation": "Restrict ssh access by IP Address (during operation)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "IP spoofing",
+                  "type": "Spoofing",
+                  "description": "An attacker spoofs one of the authorised IP addresses",
+                  "mitigation": "Restrict access with PKI"
                 }
               ],
               "attrs": {
@@ -1284,16 +1320,26 @@
               "angle": 0,
               "id": "008d915f-d01c-4d9e-991f-85629779df91",
               "z": 46,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "title": "Sensor spoofing",
+                  "type": "Spoofing",
+                  "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "sensors"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -1394,17 +1440,27 @@
               "angle": 0,
               "id": "e359a1c6-ff8c-46a5-b7e0-749663285b92",
               "z": 49,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "outOfScope": false,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "title": "Sensor spoofing",
+                  "type": "Spoofing",
+                  "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "sensors"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
