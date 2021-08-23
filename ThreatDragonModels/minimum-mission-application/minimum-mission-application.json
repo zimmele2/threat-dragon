@@ -1064,17 +1064,17 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 880,
-                "y": 460
+                "x": 884,
+                "y": 459
               },
               "target": {
-                "x": 680,
+                "x": 692,
                 "y": 460
               },
               "vertices": [
                 {
-                  "x": 780,
-                  "y": 430
+                  "x": 790,
+                  "y": 429
                 }
               ],
               "id": "72c42684-0da8-4400-8a30-9af92d930fb3",
@@ -1085,8 +1085,8 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 480,
-                "y": 460
+                "x": 477,
+                "y": 458
               },
               "target": {
                 "x": 670,
