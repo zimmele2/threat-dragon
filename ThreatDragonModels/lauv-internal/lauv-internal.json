@@ -43,6 +43,14 @@
                   "title": "SSH into application",
                   "type": "Elevation of privilege",
                   "mitigation": "Restrict ssh access by IP Address (during operation)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "By gaining access to the vehicle, the attacker could upload malicious firmware onto the auxiliary cpu causing it to fail or send faulty data.",
+                  "title": "Load malicious firmware",
+                  "type": "Tampering",
+                  "mitigation": "Allow vehicle to only load verified firmware."
                 }
               ],
               "attrs": {
@@ -79,6 +87,14 @@
                   "description": "An attacker is able to log into the application and might control and monitor all the data",
                   "type": "Elevation of privilege",
                   "mitigation": "Restrict ssh access by IP Address (during operation)"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Load malicious firmware",
+                  "type": "Tampering",
+                  "description": "By gaining access to the vehicle, the attacker could upload malicious firmware onto the auxiliary cpu causing it to fail or send faulty data.",
+                  "mitigation": "Allow vehicle to only load verified firmware."
                 }
               ],
               "attrs": {
@@ -154,7 +170,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Send invalid message",
-                  "description": "Send invalid message to the switch and block traffic on the switch.",
+                  "description": "DoS attack on the switch, blocking traffic on the system causing it to crash.",
                   "type": "Denial of service"
                 }
               ],
