@@ -616,16 +616,34 @@
               "angle": 0,
               "id": "59952927-0491-43c7-8d99-cb340e15aa6a",
               "z": 24,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attacker sends any valid command to vehicle.",
+                  "title": "Text message spoofing",
+                  "type": "Spoofing",
+                  "mitigation": "Restrict access to authorised entities only."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attacker spoofs the source number of the sent command.",
+                  "title": "Caller ID spoofing",
+                  "type": "Spoofing",
+                  "mitigation": "Implement an authorisation process that relies on trustworthy credentials only."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "remote operator"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -720,16 +738,16 @@
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "title": "SSH into application",
-                  "description": "An attacker is able to log into the application and might control and monitor all the data",
-                  "mitigation": "Restrict ssh access by IP Address (during operation)"
+                  "description": "An attacker is able to ssh into the application and might control and monitor all the data.",
+                  "mitigation": "Use SSH certificates."
                 },
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "title": "IP spoofing",
-                  "type": "Spoofing",
-                  "description": "An attacker spoofs one of the authorised IP addresses",
-                  "mitigation": "Restrict access with PKI"
+                  "type": "Elevation of privilege",
+                  "title": "Access router",
+                  "description": "Attacker manages to log into the router on the manta and view, block and change message content.",
+                  "mitigation": "Restrict access to router with certificate."
                 }
               ],
               "attrs": {
@@ -776,13 +794,23 @@
                 }
               ],
               "z": 32,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "The attacker introduces a false mobile tower, called IMSI catcher. It allows the attacker to control communication parameters like encryption algorithms and to eavesdrop the traffic. (3gpp)",
+                  "mitigation": "End-to-end message encryption",
+                  "type": "Information disclosure",
+                  "title": "Man in the middle attack"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
