@@ -104,7 +104,7 @@
                   "description": "An attacker is able to log into the application and might control and monitor all the data",
                   "title": "SSH into application",
                   "type": "Elevation of privilege",
-                  "mitigation": "Restrict ssh access by IP Address (during operation)"
+                  "mitigation": "Use SSH certificates."
                 }
               ],
               "attrs": {
