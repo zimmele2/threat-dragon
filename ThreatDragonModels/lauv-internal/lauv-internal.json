@@ -51,6 +51,14 @@
                   "title": "Load malicious firmware",
                   "type": "Tampering",
                   "mitigation": "Allow vehicle to only load verified firmware."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Physically access data on CPU",
+                  "type": "Information disclosure",
+                  "description": "An attacker can physically extract sensitive data from the CPU.",
+                  "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
                 }
               ],
               "attrs": {
@@ -272,53 +280,17 @@
               }
             },
             {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 460,
-                "y": 400
-              },
-              "angle": 0,
-              "id": "008d915f-d01c-4d9e-991f-85629779df91",
-              "z": 46,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Low",
-                  "title": "Sensor spoofing",
-                  "type": "Spoofing",
-                  "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors."
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "sensors"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "008d915f-d01c-4d9e-991f-85629779df91"
+                "id": "045dc35c-0f21-4032-9f9a-bf92bdf30e87"
               },
               "target": {
                 "id": "5f3bb63d-23fe-4e2c-9907-b93bb846ea72"
               },
               "vertices": [
                 {
-                  "x": 680,
+                  "x": 670,
                   "y": 420
                 }
               ],
@@ -326,8 +298,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.6608431741116798,
-                    "offset": -1.793451116129645
+                    "distance": 0.6110017854503215,
+                    "offset": -0.7443204026435516
                   },
                   "attrs": {
                     "text": {
@@ -356,7 +328,7 @@
                 "id": "5f3bb63d-23fe-4e2c-9907-b93bb846ea72"
               },
               "target": {
-                "id": "008d915f-d01c-4d9e-991f-85629779df91"
+                "id": "045dc35c-0f21-4032-9f9a-bf92bdf30e87"
               },
               "vertices": [
                 {
@@ -617,6 +589,42 @@
               "id": "ab606aeb-6c18-4d19-8a51-925b402a1964",
               "z": 63,
               "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 450,
+                "y": 390
+              },
+              "angle": 0,
+              "id": "045dc35c-0f21-4032-9f9a-bf92bdf30e87",
+              "z": 64,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
+                  "title": "Sensor spoofing",
+                  "type": "Spoofing",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "sensors"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
