@@ -598,7 +598,7 @@
               },
               "position": {
                 "x": 450,
-                "y": 390
+                "y": 400
               },
               "angle": 0,
               "id": "045dc35c-0f21-4032-9f9a-bf92bdf30e87",
@@ -623,6 +623,32 @@
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 450,
+                "y": 190
+              },
+              "angle": 0,
+              "id": "8e2fd2d1-eb2e-4518-b0ed-1f2ee1d2f368",
+              "z": 65,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "collected sensor data\nwhere connected to?"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
             }
