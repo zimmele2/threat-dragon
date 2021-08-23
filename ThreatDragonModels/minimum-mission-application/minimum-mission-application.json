@@ -8,7 +8,7 @@
     "contributors": [],
     "diagrams": [
       {
-        "title": "minimum-mission-setup",
+        "title": "lauv-internal",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 0,
         "diagramJson": {
@@ -139,7 +139,7 @@
                   "severity": "Medium",
                   "title": "GPS spoofing",
                   "description": "Spoof GPS data in terms of location and/or time.",
-                  "mitigation": "Implement sanity check on GPS data or rely on other location services.",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
                   "type": "Spoofing"
                 }
               ],
