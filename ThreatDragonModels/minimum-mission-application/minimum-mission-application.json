@@ -138,8 +138,8 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "GPS spoofing",
-                  "description": "Spoof GPS data in terms of location and/or time. This can lead to misdirection of the vehicle.",
-                  "mitigation": "Check location and time shift.",
+                  "description": "Spoof GPS data in terms of location and/or time.",
+                  "mitigation": "Implement sanity check on GPS data or rely on other location services.",
                   "type": "Spoofing"
                 }
               ],
@@ -271,13 +271,23 @@
                 }
               ],
               "z": 10,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "title": "Man in the middle attack",
+                  "type": "Information disclosure",
+                  "mitigation": "End-to-end message encryption"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -320,7 +330,7 @@
                   "severity": "Medium",
                   "title": "Man in the middle attack",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
-                  "mitigation": "Encryption at message level",
+                  "mitigation": "End-to-end message encryption",
                   "type": "Information disclosure"
                 }
               ],
@@ -365,13 +375,23 @@
                 }
               ],
               "z": 12,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "title": "Man in the middle attack",
+                  "type": "Information disclosure",
+                  "mitigation": "End-to-end message encryption"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -459,13 +479,23 @@
                 }
               ],
               "z": 20,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Attacker can read Iridium messages.",
+                  "mitigation": "End-to-end message encryption",
+                  "type": "Information disclosure",
+                  "title": "Man in the middle attack"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -501,13 +531,23 @@
                 }
               ],
               "z": 21,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man in the middle attack",
+                  "type": "Tampering",
+                  "description": "The attacker introduces a false mobile tower, called IMSI catcher. It allows the attacker to control communication parameters like encryption algorithms and to eavesdrop the traffic. (3gpp)",
+                  "mitigation": "End-to-end message encryption and authentication."
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -543,13 +583,23 @@
                 }
               ],
               "z": 22,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "title": "Man in the middle attack",
+                  "type": "Information disclosure",
+                  "description": "Attacker can read Iridium messages.",
+                  "mitigation": "End-to-end encryption of messages."
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -598,9 +648,17 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Text message spoofing",
-                  "description": "Attacker send valid command to vehicle.",
-                  "mitigation": "Restrict text message commands by numbers (during operation)",
+                  "description": "Attacker sends any valid command to vehicle.",
+                  "mitigation": "Restrict access to authorised entities only",
                   "type": "Spoofing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Caller ID spoofing",
+                  "type": "Spoofing",
+                  "description": "Attacker spoofs the source number of the sent command.",
+                  "mitigation": "Implement an authorisation process that relies on trustworthy credentials only."
                 }
               ],
               "attrs": {
@@ -760,13 +818,23 @@
                 }
               ],
               "z": 33,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man in the middle attack",
+                  "type": "Information disclosure",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "mitigation": "End-to-end message encryption"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -956,8 +1024,8 @@
               },
               "vertices": [
                 {
-                  "x": 790,
-                  "y": 230
+                  "x": 789,
+                  "y": 236
                 }
               ],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
