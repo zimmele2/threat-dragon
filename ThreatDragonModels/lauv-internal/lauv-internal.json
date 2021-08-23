@@ -39,14 +39,6 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "An attacker is able to log into the application and might control and monitor all the data",
-                  "title": "SSH into application",
-                  "type": "Elevation of privilege",
-                  "mitigation": "Restrict ssh access by IP Address (during operation)"
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
                   "description": "By gaining access to the vehicle, the attacker could upload malicious firmware onto the auxiliary cpu causing it to fail or send faulty data.",
                   "title": "Load malicious firmware",
                   "type": "Tampering",
@@ -103,6 +95,14 @@
                   "type": "Tampering",
                   "description": "By gaining access to the vehicle, the attacker could upload malicious firmware onto the auxiliary cpu causing it to fail or send faulty data.",
                   "mitigation": "Allow vehicle to only load verified firmware."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker can physically extract sensitive data from the CPU.",
+                  "title": "Physically access data on CPU",
+                  "type": "Information disclosure",
+                  "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
                 }
               ],
               "attrs": {
