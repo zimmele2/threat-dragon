@@ -182,42 +182,6 @@
               }
             },
             {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 708,
-                "y": 460
-              },
-              "angle": 0,
-              "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa",
-              "z": 5,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "GPS spoofing",
-                  "description": "Spoof GPS data in terms of location and/or time.",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
-                  "type": "Spoofing"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "GPS"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Flow",
               "smooth": true,
               "source": {
@@ -968,6 +932,14 @@
                   "type": "Information disclosure",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "mitigation": "Encrypt messages."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "DoS attack on the wifi network.",
+                  "type": "Denial of service",
+                  "title": "Blocking Wifi band",
+                  "mitigation": "Enable ethernet connection to manta whenever possible to provide other communication channels."
                 }
               ],
               "attrs": {
@@ -1119,7 +1091,7 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa"
+                "id": "cdd42953-bf66-4ac8-9a88-25ed290ceeb3"
               },
               "target": {
                 "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639"
@@ -1163,12 +1135,7 @@
                 "x": 910,
                 "y": 210
               },
-              "vertices": [
-                {
-                  "x": 789,
-                  "y": 190
-                }
-              ],
+              "vertices": [],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
               "z": 60,
               "attrs": {}
@@ -1177,12 +1144,12 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 884,
-                "y": 459
+                "x": 895,
+                "y": 461
               },
               "target": {
-                "x": 692,
-                "y": 460
+                "x": 691,
+                "y": 463
               },
               "vertices": [
                 {
@@ -1235,6 +1202,50 @@
               "id": "d86a13aa-7939-4a8a-b6a2-a49de33eb54b",
               "z": 63,
               "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 713,
+                "y": 461
+              },
+              "angle": 0,
+              "id": "cdd42953-bf66-4ac8-9a88-25ed290ceeb3",
+              "z": 64,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "GPS spoofing",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
+                  "type": "Spoofing",
+                  "description": "Spoof GPS data in terms of location and/or time."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "No generic repudiation threat"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "GPS"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
