@@ -20,8 +20,8 @@
                 "height": 80
               },
               "position": {
-                "x": 23,
-                "y": 299
+                "x": 30,
+                "y": 300
               },
               "angle": 0,
               "id": "12ae799e-496e-4097-85da-a2f2b777cfb0",
@@ -80,7 +80,7 @@
                   "severity": "High",
                   "title": "Get remote access to C&C application",
                   "type": "Elevation of privilege",
-                  "description": "An attacker gets full access to the C&C application due to an unsecured network and can send commands to the vehicle or monitor it."
+                  "description": "An attacker gets full access to the C&C application and can send commands to the vehicle or monitor it."
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -103,6 +103,14 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Tamper neptus application",
+                  "description": "Attacker can tamper the data on the neptus application as it does not need administrator rights.",
+                  "mitigation": "Only allow administrator to configure application"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
                   "title": "Repudiation on commands from neptus",
                   "type": "Repudiation",
                   "description": "An attacker manages to send commands to the vehicle.",
@@ -115,14 +123,6 @@
                   "title": "Read information on neptus",
                   "description": "Attacker may gain access to machine/neptus and read data.",
                   "mitigation": "Elevate privilege level to access data/neptus on machine."
-                },
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic tampering threat. Neptus can not be tempered with remotely without it being logged. Attacker would need to be on operation site to  tamper data, which is supervised."
                 }
               ],
               "attrs": {
@@ -157,8 +157,8 @@
                   "severity": "Medium",
                   "title": "Send invalid message",
                   "type": "Denial of service",
-                  "description": "Flood the LAUV and cause the application to crash and make the vehicle non responsive.",
-                  "mitigation": "Validate the origin of the messages and drop the message if not trusted. Limit response."
+                  "description": "Send an invalid message and cause the DUNE application to crash and make the vehicle non responsive",
+                  "mitigation": "Validate the origin of the messages and drop the message if not trusted."
                 },
                 {
                   "status": "Open",
@@ -167,39 +167,6 @@
                   "title": "SSH into application",
                   "type": "Elevation of privilege",
                   "mitigation": "Use SSH certificates."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "title": "Access data",
-                  "description": "Attacker can read sensitive data such as mission plans, environmental data and pick up location.",
-                  "mitigation": "Encrypt stored data."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "Spoof LAUV",
-                  "type": "Spoofing",
-                  "description": "Attacker simulates a running vehicle with DUNE simulation.",
-                  "mitigation": "Provide authentication for every vehicle."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "Tamper any part of LAUV",
-                  "type": "Tampering",
-                  "description": "The vehicle does not implement any authentication, integrity or confidentiality measures. Attacker can alter any part of the LAUV.",
-                  "mitigation": "Various counter measures. See detailed threat model for LAUV."
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "Attacker might alter log files that are not reported to neptus in real time.",
-                  "mitigation": "Authenticate logging entity and encrypt the log files."
                 }
               ],
               "attrs": {
@@ -208,6 +175,42 @@
                 },
                 "text": {
                   "text": "LAUV"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 708,
+                "y": 460
+              },
+              "angle": 0,
+              "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa",
+              "z": 5,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "GPS spoofing",
+                  "description": "Spoof GPS data in terms of location and/or time.",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
+                  "type": "Spoofing"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "GPS"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
@@ -335,10 +338,26 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data.",
-                  "title": "Man in the middle attack",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "title": "Packet sniffing",
                   "type": "Information disclosure",
-                  "mitigation": "Encrypt data."
+                  "mitigation": "Encrypt messages."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Man in the middle attack",
+                  "description": "Attacker may tamper the sent data.",
+                  "mitigation": "Provide integrity and encryption for messages"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "title": "Blocking Wifi band",
+                  "type": "Denial of service",
+                  "description": "DoS attack on the wifi network.",
+                  "mitigation": "Enable ethernet connection to manta whenever possible to provide other communication channels."
                 }
               ],
               "attrs": {
@@ -669,7 +688,7 @@
                 "height": 80
               },
               "position": {
-                "x": 487,
+                "x": 492,
                 "y": 458
               },
               "angle": 0,
@@ -689,10 +708,9 @@
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
                   "title": "Generic repudiation threat",
                   "type": "Repudiation",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat.",
-                  "mitigation": "Every action is logged on the manta."
+                  "description": "No generic repudiation threat. Every action is logged on the manta."
                 }
               ],
               "attrs": {
@@ -798,9 +816,17 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
+                  "title": "SSH into application",
+                  "description": "An attacker is able to ssh into the DUNE/manta application and might control and monitor all the data.",
+                  "mitigation": "Use SSH certificates."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
                   "title": "Access router",
-                  "description": "Attacker manages to log into the manta and view, block and change message content.",
-                  "mitigation": "Authenticate every entitiy that want to connect to the manta."
+                  "description": "Attacker manages to log into the router on the manta and view, block and change message content.",
+                  "mitigation": "Restrict access to router with certificate."
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -827,14 +853,6 @@
                   "severity": "Medium",
                   "description": "An attacker succeeds to run a DoS attack either by jamming or flooding",
                   "mitigation": "Frequency hopping spread spectrum and detect and reroute.\nAuthenticate packages and limit response to non-valid packages."
-                },
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "No generic tampering threat. Manta does not have a remote update mechanism. \nAttacker would need to be on operation site to  tamper data, which is supervised."
                 }
               ],
               "attrs": {
@@ -940,8 +958,16 @@
                   "severity": "Medium",
                   "title": "Man in the middle attack",
                   "type": "Information disclosure",
-                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data.",
-                  "mitigation": "Encrypt data."
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "mitigation": "End-to-end message encryption"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Packet sniffing",
+                  "type": "Information disclosure",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "mitigation": "Encrypt messages."
                 }
               ],
               "attrs": {
@@ -986,32 +1012,6 @@
               ],
               "z": 34,
               "hasOpenThreats": false,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic DoS threat"
-                }
-              ],
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -1054,32 +1054,6 @@
               ],
               "z": 35,
               "hasOpenThreats": false,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic tampering threat."
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic DoS threat"
-                }
-              ],
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -1145,7 +1119,7 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "82af4f54-a7b0-4b42-a348-35b1c4ed22c9"
+                "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa"
               },
               "target": {
                 "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639"
@@ -1191,8 +1165,8 @@
               },
               "vertices": [
                 {
-                  "x": 792,
-                  "y": 233
+                  "x": 789,
+                  "y": 190
                 }
               ],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
@@ -1203,17 +1177,17 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 896,
-                "y": 466
+                "x": 884,
+                "y": 459
               },
               "target": {
-                "x": 689,
-                "y": 466
+                "x": 692,
+                "y": 460
               },
               "vertices": [
                 {
-                  "x": 792,
-                  "y": 432
+                  "x": 790,
+                  "y": 429
                 }
               ],
               "id": "72c42684-0da8-4400-8a30-9af92d930fb3",
@@ -1224,12 +1198,12 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 466,
-                "y": 461
+                "x": 477,
+                "y": 458
               },
               "target": {
-                "x": 678,
-                "y": 466
+                "x": 670,
+                "y": 460
               },
               "vertices": [
                 {
@@ -1261,51 +1235,6 @@
               "id": "d86a13aa-7939-4a8a-b6a2-a49de33eb54b",
               "z": 63,
               "attrs": {}
-            },
-            {
-              "type": "tm.Actor",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 713,
-                "y": 459
-              },
-              "angle": 0,
-              "id": "82af4f54-a7b0-4b42-a348-35b1c4ed22c9",
-              "z": 64,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "GPS spoofing",
-                  "type": "Spoofing",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
-                  "description": "Spoof GPS data in terms of location and/or time."
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic repudiation threat.",
-                  "mitigation": "All GPS data is logged and reported to neptus regularly."
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "GPS"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
             }
           ]
         },
