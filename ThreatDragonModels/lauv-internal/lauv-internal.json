@@ -51,6 +51,14 @@
                   "type": "Information disclosure",
                   "description": "An attacker can physically extract sensitive data from the CPU.",
                   "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Delete or alter log information",
+                  "type": "Repudiation",
+                  "description": "An attacker succeeds to delete or alter log files on the vehicle by physically gaining access to it.",
+                  "mitigation": "Encrypt and sign the logged data."
                 }
               ],
               "attrs": {
