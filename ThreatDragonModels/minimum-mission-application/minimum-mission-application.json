@@ -470,6 +470,14 @@
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "type": "Information disclosure",
                   "mitigation": "Encrypt messages."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "mitigation": "Use other communication channels such as acoustic, iridium or UMTS.",
+                  "description": "DoS attack on the wifi network.",
+                  "type": "Denial of service",
+                  "title": "Blocking Wifi band"
                 }
               ],
               "attrs": {
