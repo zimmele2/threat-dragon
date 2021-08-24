@@ -182,6 +182,42 @@
               }
             },
             {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 708,
+                "y": 460
+              },
+              "angle": 0,
+              "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa",
+              "z": 5,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "GPS spoofing",
+                  "description": "Spoof GPS data in terms of location and/or time.",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
+                  "type": "Spoofing"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "GPS"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
               "type": "tm.Flow",
               "smooth": true,
               "source": {
@@ -426,6 +462,14 @@
                   "title": "Man in the middle attack",
                   "type": "Information disclosure",
                   "mitigation": "End-to-end message encryption"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Packet sniffing",
+                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "type": "Information disclosure",
+                  "mitigation": "Encrypt messages."
                 }
               ],
               "attrs": {
@@ -582,6 +626,23 @@
                   "type": "Tampering",
                   "description": "The attacker introduces a false mobile tower, called IMSI catcher. It allows the attacker to control communication parameters like encryption algorithms and to eavesdrop the traffic. (3gpp)",
                   "mitigation": "End-to-end message encryption and authentication."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "title": "DoS attack",
+                  "type": "Denial of service",
+                  "description": "DoS attack on gsm network",
+                  "mitigation": "LAUV is still reachable by iridium."
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic information disclosure threat.",
+                  "mitigation": "UMTS provides confidentiality."
                 }
               ],
               "attrs": {
@@ -640,7 +701,7 @@
                   "title": "Generic tampering threat",
                   "type": "Tampering",
                   "status": "Mitigated",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "description": "No generic tampering threat"
                 },
                 {
@@ -649,7 +710,7 @@
                   "type": "Denial of service",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic DoS threat"
+                  "description": "No/A generic DoS threat? did not find any"
                 }
               ],
               "attrs": {
@@ -948,14 +1009,6 @@
                   "type": "Information disclosure",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "mitigation": "Encrypt messages."
-                },
-                {
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "DoS attack on the wifi network.",
-                  "type": "Denial of service",
-                  "title": "Blocking Wifi band",
-                  "mitigation": "Enable ethernet connection to manta whenever possible to provide other communication channels."
                 }
               ],
               "attrs": {
@@ -1107,7 +1160,7 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "cdd42953-bf66-4ac8-9a88-25ed290ceeb3"
+                "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa"
               },
               "target": {
                 "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639"
@@ -1151,7 +1204,12 @@
                 "x": 910,
                 "y": 210
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 789,
+                  "y": 190
+                }
+              ],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
               "z": 60,
               "attrs": {}
@@ -1160,12 +1218,12 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 895,
-                "y": 461
+                "x": 884,
+                "y": 459
               },
               "target": {
-                "x": 691,
-                "y": 463
+                "x": 692,
+                "y": 460
               },
               "vertices": [
                 {
@@ -1218,50 +1276,6 @@
               "id": "d86a13aa-7939-4a8a-b6a2-a49de33eb54b",
               "z": 63,
               "attrs": {}
-            },
-            {
-              "type": "tm.Actor",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 713,
-                "y": 461
-              },
-              "angle": 0,
-              "id": "cdd42953-bf66-4ac8-9a88-25ed290ceeb3",
-              "z": 64,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "GPS spoofing",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
-                  "type": "Spoofing",
-                  "description": "Spoof GPS data in terms of location and/or time."
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "status": "Open",
-                  "severity": "Low",
-                  "description": "No generic repudiation threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "GPS"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
             }
           ]
         },
