@@ -20,8 +20,8 @@
                 "height": 80
               },
               "position": {
-                "x": 30,
-                "y": 300
+                "x": 1,
+                "y": 303
               },
               "angle": 0,
               "id": "12ae799e-496e-4097-85da-a2f2b777cfb0",
@@ -80,7 +80,7 @@
                   "severity": "High",
                   "title": "Get remote access to C&C application",
                   "type": "Elevation of privilege",
-                  "description": "An attacker gets full access to the C&C application and can send commands to the vehicle or monitor it."
+                  "description": "An attacker gets full access to the C&C application due to an unsecured network and can send commands to the vehicle or monitor it."
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -103,14 +103,6 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "type": "Tampering",
-                  "title": "Tamper neptus application",
-                  "description": "Attacker can tamper the data on the neptus application as it does not need administrator rights.",
-                  "mitigation": "Only allow administrator to configure application"
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
                   "title": "Repudiation on commands from neptus",
                   "type": "Repudiation",
                   "description": "An attacker manages to send commands to the vehicle.",
@@ -123,6 +115,14 @@
                   "title": "Read information on neptus",
                   "description": "Attacker may gain access to machine/neptus and read data.",
                   "mitigation": "Elevate privilege level to access data/neptus on machine."
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic tampering threat."
                 }
               ],
               "attrs": {
@@ -157,8 +157,8 @@
                   "severity": "Medium",
                   "title": "Send invalid message",
                   "type": "Denial of service",
-                  "description": "Send an invalid message and cause the DUNE application to crash and make the vehicle non responsive",
-                  "mitigation": "Validate the origin of the messages and drop the message if not trusted."
+                  "description": "Flood the LAUV and cause the application to crash and make the vehicle non responsive.",
+                  "mitigation": "Validate the origin of the messages and drop the message if not trusted. Limit response."
                 },
                 {
                   "status": "Open",
@@ -167,6 +167,39 @@
                   "title": "SSH into application",
                   "type": "Elevation of privilege",
                   "mitigation": "Use SSH certificates."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Access vehicle through own instance of neptus",
+                  "description": "Anyone can run an instance of neptus and send commands and supervise a running vehicle.",
+                  "mitigation": "Authenticate any instance that wants to connect to the LAUV."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Spoof LAUV",
+                  "type": "Spoofing",
+                  "description": "Attacker simulates a running vehicle with DUNE simulation.",
+                  "mitigation": "Provide authentication for every vehicle."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Tamper any part of LAUV",
+                  "type": "Tampering",
+                  "description": "The vehicle does not implement any authentication, integrity or confidentiality measures. Attacker can alter any part of the LAUV.",
+                  "mitigation": "Various counter measures. See detailed threat model for LAUV."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attacker might alter log files that are not reported to neptus in real time.",
+                  "mitigation": "Authenticate logging entity and encrypt the log files."
                 }
               ],
               "attrs": {
@@ -175,42 +208,6 @@
                 },
                 "text": {
                   "text": "LAUV"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 708,
-                "y": 460
-              },
-              "angle": 0,
-              "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa",
-              "z": 5,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "GPS spoofing",
-                  "description": "Spoof GPS data in terms of location and/or time.",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
-                  "type": "Spoofing"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "GPS"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
@@ -672,7 +669,7 @@
                 "height": 80
               },
               "position": {
-                "x": 492,
+                "x": 487,
                 "y": 458
               },
               "angle": 0,
@@ -692,9 +689,10 @@
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
                   "title": "Generic repudiation threat",
                   "type": "Repudiation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat. Every action is logged on the manta."
+                  "description": "No generic repudiation threat.",
+                  "mitigation": "Every action is logged on the manta."
                 }
               ],
               "attrs": {
@@ -1095,7 +1093,7 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa"
+                "id": "82af4f54-a7b0-4b42-a348-35b1c4ed22c9"
               },
               "target": {
                 "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639"
@@ -1141,8 +1139,8 @@
               },
               "vertices": [
                 {
-                  "x": 789,
-                  "y": 190
+                  "x": 792,
+                  "y": 233
                 }
               ],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
@@ -1153,17 +1151,17 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 884,
-                "y": 459
+                "x": 896,
+                "y": 466
               },
               "target": {
-                "x": 692,
-                "y": 460
+                "x": 689,
+                "y": 466
               },
               "vertices": [
                 {
-                  "x": 790,
-                  "y": 429
+                  "x": 792,
+                  "y": 432
                 }
               ],
               "id": "72c42684-0da8-4400-8a30-9af92d930fb3",
@@ -1174,12 +1172,12 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 477,
-                "y": 458
+                "x": 466,
+                "y": 461
               },
               "target": {
-                "x": 670,
-                "y": 460
+                "x": 678,
+                "y": 466
               },
               "vertices": [
                 {
@@ -1211,6 +1209,51 @@
               "id": "d86a13aa-7939-4a8a-b6a2-a49de33eb54b",
               "z": 63,
               "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 713,
+                "y": 459
+              },
+              "angle": 0,
+              "id": "82af4f54-a7b0-4b42-a348-35b1c4ed22c9",
+              "z": 64,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "GPS spoofing",
+                  "type": "Spoofing",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
+                  "description": "Spoof GPS data in terms of location and/or time."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic repudiation threat.",
+                  "mitigation": "All GPS data is logged and reported to neptus regularly."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "GPS"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
