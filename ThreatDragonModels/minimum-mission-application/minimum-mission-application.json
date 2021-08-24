@@ -458,10 +458,10 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
+                  "description": "Attacker may tamper the sent data.",
                   "title": "Man in the middle attack",
-                  "type": "Information disclosure",
-                  "mitigation": "End-to-end message encryption"
+                  "type": "Tampering",
+                  "mitigation": "Provide integrity and encryption for messages"
                 },
                 {
                   "status": "Open",
