@@ -26,16 +26,36 @@
               "angle": 0,
               "id": "12ae799e-496e-4097-85da-a2f2b777cfb0",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Spoof the operator",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Spoof the operator.",
+                  "mitigation": "Require operator to log in with two factor authentication."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "A generic repudiation threat",
+                  "mitigation": "All activity is logged on neptus and can also be verified on a second instance of neptus."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "operator"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -61,6 +81,48 @@
                   "title": "Get remote access to C&C application",
                   "type": "Elevation of privilege",
                   "description": "An attacker gets full access to the C&C application and can send commands to the vehicle or monitor it."
+                },
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Spoof neptus application",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker runs its own instance of the neptus application which is publicly available.",
+                  "mitigation": "The vehicles shall authenticate all entities that connect to it."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker succeeds to run a DoS attack either by jamming or flooding",
+                  "mitigation": "Frequency hopping spread spectrum and detect and reroute.\nAuthenticate packages and limit response to non-valid packages."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "title": "Tamper neptus application",
+                  "description": "Attacker can tamper the data on the neptus application as it does not need administrator rights.",
+                  "mitigation": "Only allow administrator to configure application"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Repudiation on commands from neptus",
+                  "type": "Repudiation",
+                  "description": "An attacker manages to send commands to the vehicle.",
+                  "mitigation": "All activity on neptus is logged."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Read information on neptus",
+                  "description": "Attacker may gain access to machine/neptus and read data.",
+                  "mitigation": "Elevate privilege level to access data/neptus on machine."
                 }
               ],
               "attrs": {
@@ -621,18 +683,18 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "Attacker sends any valid command to vehicle.",
+                  "description": "Attacker sends any valid command to vehicle over 3G.",
                   "title": "Text message spoofing",
                   "type": "Spoofing",
-                  "mitigation": "Restrict access to authorised entities only."
+                  "mitigation": "Authenticate and encrypt messages"
                 },
                 {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "Attacker spoofs the source number of the sent command.",
-                  "title": "Caller ID spoofing",
-                  "type": "Spoofing",
-                  "mitigation": "Implement an authorisation process that relies on trustworthy credentials only."
+                  "description": "No generic repudiation threat. Every action is logged on the manta."
                 }
               ],
               "attrs": {
@@ -666,17 +728,18 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Text message spoofing",
-                  "description": "Attacker sends any valid command to vehicle.",
-                  "mitigation": "Restrict access to authorised entities only",
+                  "description": "Attacker sends any valid command to vehicle over 3G.",
+                  "mitigation": "Authenticate and encrypt messages.",
                   "type": "Spoofing"
                 },
                 {
-                  "status": "Open",
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
                   "severity": "Medium",
-                  "title": "Caller ID spoofing",
-                  "type": "Spoofing",
-                  "description": "Attacker spoofs the source number of the sent command.",
-                  "mitigation": "Implement an authorisation process that relies on trustworthy credentials only."
+                  "description": "A generic repudiation threat",
+                  "mitigation": "All activity on dune is logged and reported to neptus."
                 }
               ],
               "attrs": {
@@ -736,18 +799,44 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "type": "Elevation of privilege",
+                  "type": "Information disclosure",
                   "title": "SSH into application",
-                  "description": "An attacker is able to ssh into the application and might control and monitor all the data.",
+                  "description": "An attacker is able to ssh into the DUNE/manta application and might control and monitor all the data.",
                   "mitigation": "Use SSH certificates."
                 },
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "type": "Elevation of privilege",
+                  "type": "Information disclosure",
                   "title": "Access router",
                   "description": "Attacker manages to log into the router on the manta and view, block and change message content.",
                   "mitigation": "Restrict access to router with certificate."
+                },
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Spoof manta application",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attacker may run his own instance of the manta application.",
+                  "mitigation": "Authenticate manta instances with hardware credentials"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Generic elevation threat",
+                  "type": "Elevation of privilege",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "No generic elevation threat. Only one privilege level."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "An attacker succeeds to run a DoS attack either by jamming or flooding",
+                  "mitigation": "Frequency hopping spread spectrum and detect and reroute.\nAuthenticate packages and limit response to non-valid packages."
                 }
               ],
               "attrs": {
@@ -1053,7 +1142,7 @@
               "vertices": [
                 {
                   "x": 789,
-                  "y": 236
+                  "y": 190
                 }
               ],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
