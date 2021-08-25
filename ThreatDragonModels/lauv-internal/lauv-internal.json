@@ -337,7 +337,7 @@
               },
               "position": {
                 "x": 960,
-                "y": 200
+                "y": 190
               },
               "angle": 0,
               "id": "e359a1c6-ff8c-46a5-b7e0-749663285b92",
@@ -548,7 +548,7 @@
               },
               "position": {
                 "x": 960,
-                "y": 410
+                "y": 400
               },
               "angle": 0,
               "id": "045dc35c-0f21-4032-9f9a-bf92bdf30e87",
@@ -668,7 +668,7 @@
               },
               "position": {
                 "x": 960,
-                "y": 620
+                "y": 610
               },
               "angle": 0,
               "id": "493161ea-1c44-43f1-ac20-bf11427acc91",
@@ -1045,6 +1045,22 @@
                   "class": "connection hasNoOpenThreats isOutOfScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 650,
+                "y": 610
+              },
+              "target": {
+                "x": 710,
+                "y": 680
+              },
+              "vertices": [],
+              "id": "942cb7e9-4a6b-4b53-9ad4-358732cce5f5",
+              "z": 78,
+              "attrs": {}
             }
           ]
         },
