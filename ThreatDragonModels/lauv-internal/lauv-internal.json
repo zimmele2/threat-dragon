@@ -351,7 +351,7 @@
                   "title": "Sensor spoofing",
                   "type": "Spoofing",
                   "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors"
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy  of the potentially faulty sensors"
                 }
               ],
               "attrs": {
@@ -673,16 +673,26 @@
               "angle": 0,
               "id": "493161ea-1c44-43f1-ac20-bf11427acc91",
               "z": 68,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
+                  "type": "Spoofing",
+                  "title": "Sensor spoofing",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "sensor"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -1055,7 +1065,7 @@
               },
               "target": {
                 "x": 710,
-                "y": 680
+                "y": 690
               },
               "vertices": [],
               "id": "942cb7e9-4a6b-4b53-9ad4-358732cce5f5",
