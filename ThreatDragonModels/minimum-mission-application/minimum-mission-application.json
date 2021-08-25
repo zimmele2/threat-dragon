@@ -809,7 +809,7 @@
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
                   "title": "Generic repudiation threat",
                   "type": "Repudiation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "description": "No generic repudiation threat. Every action is logged on the manta."
                 }
@@ -1351,6 +1351,22 @@
                   "severity": "Medium",
                   "description": "Attacker uses gps jammer.",
                   "mitigation": "Rely on other localisation services."
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic tampering threat"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic information disclosure threat"
                 }
               ],
               "attrs": {
@@ -1375,8 +1391,8 @@
               },
               "vertices": [
                 {
-                  "x": 790,
-                  "y": 231
+                  "x": 789,
+                  "y": 220
                 }
               ],
               "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
