@@ -182,42 +182,6 @@
               }
             },
             {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 708,
-                "y": 460
-              },
-              "angle": 0,
-              "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa",
-              "z": 5,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "GPS spoofing",
-                  "description": "Spoof GPS data in terms of location and/or time.",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
-                  "type": "Spoofing"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "GPS"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Flow",
               "smooth": true,
               "source": {
@@ -1168,7 +1132,7 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "50c98e60-2879-406d-9730-c6fd7e8e13aa"
+                "id": "b0a3cf7a-87c4-4949-bf6a-80a9debe11db"
               },
               "target": {
                 "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639"
@@ -1284,6 +1248,50 @@
               "id": "d86a13aa-7939-4a8a-b6a2-a49de33eb54b",
               "z": 63,
               "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 712,
+                "y": 460
+              },
+              "angle": 0,
+              "id": "b0a3cf7a-87c4-4949-bf6a-80a9debe11db",
+              "z": 64,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
+                  "type": "Repudiation",
+                  "title": "GPS spoofing",
+                  "description": "Spoof GPS data in terms of location and/or time."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic repudiation threat. GPS is logged on the LAUV and reported to neptus."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "GPS"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
