@@ -992,14 +992,6 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "The attacker introduces a false mobile tower, called IMSI catcher. It allows the attacker to control communication parameters like encryption algorithms and to eavesdrop the traffic. (3gpp)",
-                  "mitigation": "End-to-end message encryption",
-                  "type": "Information disclosure",
-                  "title": "Man in the middle attack"
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "The attacker introduces a false mobile tower, called IMSI catcher. It allows the attacker to control communication parameters like encryption algorithms and to eavesdrop the traffic. (3gpp)",
                   "mitigation": "End-to-end message encryption.",
@@ -1019,7 +1011,7 @@
                   "title": "Generic DoS threat",
                   "type": "Denial of service",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "description": "DoS attack on gsm network. Out of scope because the mobile network is not managed by LSTS."
                 }
               ],
