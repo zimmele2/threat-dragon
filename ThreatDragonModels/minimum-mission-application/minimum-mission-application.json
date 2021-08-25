@@ -408,9 +408,25 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Man in the middle attack",
+                  "description": "Attacker may tamper the sent data.",
+                  "mitigation": "Provide integrity and encryption for messages.",
+                  "type": "Tampering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Packet sniffing",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
-                  "mitigation": "End-to-end message encryption",
+                  "mitigation": "Encrypt messages",
                   "type": "Information disclosure"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "description": "DoS attack on the wifi network.",
+                  "mitigation": "Use other communication channels such as acoustic, iridium or UMTS.",
+                  "title": "Blocking Wifi band",
+                  "type": "Denial of service"
                 }
               ],
               "attrs": {
@@ -462,7 +478,7 @@
                   "description": "Attacker may tamper the sent data.",
                   "title": "Man in the middle attack",
                   "type": "Tampering",
-                  "mitigation": "Provide integrity and encryption for messages"
+                  "mitigation": "Provide integrity and encryption for messages."
                 },
                 {
                   "status": "Open",
@@ -528,9 +544,9 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Man in the middle attack",
-                  "type": "Information disclosure",
-                  "description": "An attacker intercepts the acoustic connection and get access to sensitive data like mission plans (really sent over acoustic??)",
-                  "mitigation": "Encryption at the message level"
+                  "type": "Tampering",
+                  "description": "An attacker intercepts the acoustic connection and inject false messages, compromising the integrity.",
+                  "mitigation": "Authenticate and encrypt messages."
                 }
               ],
               "attrs": {
