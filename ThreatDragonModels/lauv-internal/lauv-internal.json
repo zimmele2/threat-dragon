@@ -352,6 +352,14 @@
                   "type": "Spoofing",
                   "description": "An attacker succeeds to spoof sensor data which results in faulty behaviour of the vehicle",
                   "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy  of the potentially faulty sensors"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic repudiation threat"
                 }
               ],
               "attrs": {
@@ -562,6 +570,14 @@
                   "title": "Sensor spoofing",
                   "type": "Spoofing",
                   "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic repudiation threat"
                 }
               ],
               "attrs": {
@@ -682,6 +698,14 @@
                   "type": "Spoofing",
                   "title": "Sensor spoofing",
                   "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic repudiation threat"
                 }
               ],
               "attrs": {
