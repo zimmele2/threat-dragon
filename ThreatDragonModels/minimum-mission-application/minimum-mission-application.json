@@ -555,6 +555,15 @@
                   "type": "Information disclosure",
                   "description": "Any attacker with an acoustic module can eavesdrop on the messages and get access to sensitive data.",
                   "mitigation": "Encrypt messages."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attacker jamms the acoustic network and cuts communication to the vehicle.",
+                  "mitigation": "Spread spectrum techniques, multi-frequency communications. lower duty cycle, strong forward error correction codes."
                 }
               ],
               "attrs": {
@@ -1238,9 +1247,18 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Man in the middle attack",
-                  "type": "Information disclosure",
-                  "description": "An attacker intercepts the acoustic connection and get access to sensitive data like mission plans (really received over acoustic??)",
-                  "mitigation": "Encryption at message level"
+                  "type": "Tampering",
+                  "description": "An attacker intercepts the acoustic connection and inject false messages, compromising the integrity.",
+                  "mitigation": "Authenticate and encrypt messages."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Attacker jamms the acoustic network and cuts communication to the vehicle.",
+                  "mitigation": "Spread spectrum techniques, multi-frequency communications. lower duty cycle, strong forward error correction codes."
                 }
               ],
               "attrs": {
