@@ -824,23 +824,17 @@
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Send invalid message",
-                  "type": "Denial of service"
+                  "type": "Denial of service",
+                  "description": "Flood The DUNE application on the manta and cause it to crash.",
+                  "mitigation": "Only process authenticated messages and limit response to non valid messages."
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "title": "SSH into application",
-                  "description": "An attacker is able to ssh into the DUNE/manta application and might control and monitor all the data.",
-                  "mitigation": "Use SSH certificates."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Information disclosure",
                   "title": "Access router",
-                  "description": "Attacker manages to log into the router on the manta and view, block and change message content.",
-                  "mitigation": "Restrict access to router with certificate."
+                  "description": "Attacker manages to log into the router on the manta and view network credentials.",
+                  "mitigation": "Restrict access to router to authenticated entities."
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -855,7 +849,7 @@
                   "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
                   "title": "Generic elevation threat",
                   "type": "Elevation of privilege",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "description": "No generic elevation threat. Only one privilege level."
                 },
@@ -876,6 +870,14 @@
                   "severity": "Medium",
                   "description": "Attacker can connect to the manta and change the application code.",
                   "mitigation": "Authenticate all entities that want to connect to the manta."
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic repudiation threat. All activity is logged on the manta and reported to neptus."
                 }
               ],
               "attrs": {
