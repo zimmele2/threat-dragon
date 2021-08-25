@@ -31,34 +31,19 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "title": "Send invalid message",
-                  "type": "Denial of service",
-                  "description": "Send an invalid message and cause the DUNE application to crash and make the vehicle non responsive",
-                  "mitigation": "Validate the origin of the messages and drop the message if not trusted."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "By gaining access to the vehicle, the attacker could upload malicious firmware onto the auxiliary cpu causing it to fail or send faulty data.",
-                  "title": "Load malicious firmware",
-                  "type": "Tampering",
-                  "mitigation": "Allow vehicle to only load verified firmware."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
                   "title": "Physically access data on CPU",
                   "type": "Information disclosure",
                   "description": "An attacker can physically extract sensitive data from the CPU.",
                   "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
                 },
                 {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
                   "status": "Open",
-                  "severity": "Medium",
-                  "title": "Delete or alter log information",
-                  "type": "Repudiation",
-                  "description": "An attacker succeeds to delete or alter log files on the vehicle by physically gaining access to it.",
-                  "mitigation": "Encrypt and sign the logged data."
+                  "severity": "High",
+                  "description": "Attacker can replace the whole device or load his own instance of DUNE onto the device featuring malicious firmware.",
+                  "mitigation": "Use hardware authentication.\nOnly boot authenticated firmware."
                 }
               ],
               "attrs": {
@@ -111,6 +96,15 @@
                   "title": "Physically access data on CPU",
                   "type": "Information disclosure",
                   "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
+                },
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Attacker can replace the whole device or load his own instance of DUNE onto the device featuring malicious firmware.",
+                  "mitigation": "Use hardware authentication.\nOnly boot authenticated firmware."
                 }
               ],
               "attrs": {
