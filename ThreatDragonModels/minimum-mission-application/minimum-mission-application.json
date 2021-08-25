@@ -80,7 +80,8 @@
                   "severity": "High",
                   "title": "Get remote access to C&C application",
                   "type": "Elevation of privilege",
-                  "description": "An attacker gets full access to the C&C application and can send commands to the vehicle or monitor it."
+                  "description": "An attacker gets full access to the neptus application because of weak password protection.",
+                  "mitigation": "Require authentication to run the neptus application."
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
