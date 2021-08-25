@@ -408,13 +408,41 @@
                 }
               ],
               "z": 47,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic tampering threat",
+                  "mitigation": "Authenticate and encrypt messages."
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Encrypt messages."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic DoS threat"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -495,48 +523,6 @@
                 }
               ],
               "z": 50,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "38217ad1-2342-4cf7-a22a-d2702d2f2639"
-              },
-              "target": {
-                "id": "e359a1c6-ff8c-46a5-b7e0-749663285b92"
-              },
-              "vertices": [
-                {
-                  "x": 890,
-                  "y": 210
-                }
-              ],
-              "id": "e809c871-15b0-4149-9c7a-c9507174de31",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.7223883324737889,
-                    "offset": -2.836893445377207
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "serial",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 51,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
@@ -745,48 +731,6 @@
               }
             },
             {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "5f3bb63d-23fe-4e2c-9907-b93bb846ea72"
-              },
-              "target": {
-                "id": "045dc35c-0f21-4032-9f9a-bf92bdf30e87"
-              },
-              "vertices": [
-                {
-                  "x": 890,
-                  "y": 420
-                }
-              ],
-              "id": "7d091b3d-b165-4687-a956-0a066e3b8669",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.6515415043841364,
-                    "offset": 2.278293345147584
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "ethernet",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 66,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
@@ -850,48 +794,6 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "ad610f81-6468-4d5c-bfad-35504628d36e"
-              },
-              "target": {
-                "id": "493161ea-1c44-43f1-ac20-bf11427acc91"
-              },
-              "vertices": [
-                {
-                  "x": 890,
-                  "y": 630
-                }
-              ],
-              "id": "40432ce8-12a0-48ce-89ca-b54034abe450",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.6597617979903821,
-                    "offset": -2.0769471071436043
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "serial",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 69,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
                 "id": "493161ea-1c44-43f1-ac20-bf11427acc91"
               },
               "target": {
@@ -920,13 +822,41 @@
                 }
               ],
               "z": 70,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic tampering threat",
+                  "mitigation": "Authenticate and encrypt messages."
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Encrypt messages."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic DoS threat"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -1126,7 +1056,7 @@
                   "title": "Generic informtion disclosure threat",
                   "type": "Information disclosure",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "description": "A generic information disclosure threat.",
                   "mitigation": "Encrypt messages."
                 },
@@ -1135,7 +1065,7 @@
                   "title": "Generic DoS threat",
                   "type": "Denial of service",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "description": "A generic DoS threat."
                 }
               ],
