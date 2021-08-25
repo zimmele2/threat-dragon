@@ -42,8 +42,8 @@
                   "type": "Tampering",
                   "status": "Open",
                   "severity": "High",
-                  "description": "Attacker can replace the whole device or load his own instance of DUNE onto the device featuring malicious firmware.",
-                  "mitigation": "Use hardware authentication.\nOnly boot authenticated firmware."
+                  "description": "Attacker can load his own instance of DUNE onto the device featuring malicious firmware.",
+                  "mitigation": "Only boot/execute authenticated firmware."
                 }
               ],
               "attrs": {
