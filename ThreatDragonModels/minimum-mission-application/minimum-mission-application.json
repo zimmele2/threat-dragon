@@ -651,7 +651,7 @@
                   },
                   "attrs": {
                     "text": {
-                      "text": "gsm",
+                      "text": "umts",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -672,10 +672,10 @@
                 {
                   "status": "Mitigated",
                   "severity": "Low",
-                  "title": "DoS attack",
+                  "title": "Generic DoS threat",
                   "type": "Denial of service",
-                  "description": "DoS attack on gsm network",
-                  "mitigation": "LAUV is still reachable by iridium."
+                  "description": "DoS attack on gsm network. Out of scope because the mobile network is not managed by LSTS.",
+                  "mitigation": ""
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
@@ -687,6 +687,8 @@
                   "mitigation": "UMTS provides confidentiality."
                 }
               ],
+              "isEncrypted": true,
+              "isPublicNetwork": true,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasOpenThreats isInScope"
@@ -977,7 +979,7 @@
                   },
                   "attrs": {
                     "text": {
-                      "text": "gsm",
+                      "text": "umts",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -994,8 +996,34 @@
                   "mitigation": "End-to-end message encryption",
                   "type": "Information disclosure",
                   "title": "Man in the middle attack"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "The attacker introduces a false mobile tower, called IMSI catcher. It allows the attacker to control communication parameters like encryption algorithms and to eavesdrop the traffic. (3gpp)",
+                  "mitigation": "End-to-end message encryption.",
+                  "title": "Man in the middle attack"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "No generic information disclosure threat",
+                  "mitigation": "UMTS provides confidentiality."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "description": "DoS attack on gsm network. Out of scope because the mobile network is not managed by LSTS."
                 }
               ],
+              "isEncrypted": true,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasOpenThreats isInScope"
@@ -1370,8 +1398,8 @@
               },
               "vertices": [
                 {
-                  "x": 570,
-                  "y": 430
+                  "x": 572,
+                  "y": 466
                 }
               ],
               "id": "8ea05898-9602-46b1-bbc1-828de424cc4b",
