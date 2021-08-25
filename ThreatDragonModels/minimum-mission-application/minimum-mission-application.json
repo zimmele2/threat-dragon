@@ -982,6 +982,14 @@
                   "type": "Information disclosure",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "mitigation": "Encrypt messages."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "title": "Blocking Wifi band",
+                  "mitigation": "Enable ethernet connection to manta whenever possible to provide other communication channels.",
+                  "description": "DoS attack on the wifi network",
+                  "type": "Denial of service"
                 }
               ],
               "attrs": {
