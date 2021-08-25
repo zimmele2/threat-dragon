@@ -180,9 +180,9 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
-                  "title": "Send invalid message",
-                  "description": "DoS attack on the switch, blocking traffic on the system causing it to crash.",
+                  "severity": "Low",
+                  "title": "Generic DoS threat",
+                  "description": "Attacker floods the switch and blocks the communication.",
                   "type": "Denial of service"
                 }
               ],
