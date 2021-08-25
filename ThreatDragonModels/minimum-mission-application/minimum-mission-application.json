@@ -822,14 +822,6 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
-                  "title": "Send invalid message",
-                  "type": "Denial of service",
-                  "description": "Flood The DUNE application on the manta and cause it to crash.",
-                  "mitigation": "Only process authenticated messages and limit response to non valid messages."
-                },
-                {
-                  "status": "Open",
                   "severity": "Low",
                   "type": "Information disclosure",
                   "title": "Access router",
