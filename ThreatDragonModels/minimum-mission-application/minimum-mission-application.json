@@ -109,7 +109,7 @@
                   "mitigation": "Use two factor authentication to log in."
                 },
                 {
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "title": "Repudiation on commands from neptus",
                   "type": "Repudiation",
@@ -1257,7 +1257,7 @@
               },
               "position": {
                 "x": 712,
-                "y": 460
+                "y": 459
               },
               "angle": 0,
               "id": "b0a3cf7a-87c4-4949-bf6a-80a9debe11db",
