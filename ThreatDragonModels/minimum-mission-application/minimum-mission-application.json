@@ -88,7 +88,7 @@
                   "type": "Spoofing",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "An attacker runs its own instance of the neptus application which is publicly available.",
+                  "description": "An attacker runs its own instance of the neptus application and connects to the vehicle",
                   "mitigation": "The vehicles shall authenticate all entities that connect to it."
                 },
                 {
@@ -105,24 +105,24 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "title": "Tamper neptus application",
-                  "description": "Attacker can tamper the data on the neptus application as it does not need administrator rights.",
-                  "mitigation": "Only allow administrator to configure application"
+                  "description": "Attacker remotely logs into operators laptop in the unsecured network and changes application code.",
+                  "mitigation": "Use two factor authentication to log in."
                 },
                 {
                   "status": "Open",
                   "severity": "Medium",
                   "title": "Repudiation on commands from neptus",
                   "type": "Repudiation",
-                  "description": "An attacker manages to send commands to the vehicle.",
-                  "mitigation": "All activity on neptus is logged."
+                  "description": "An attacker manages to send commands to the vehicle either from the operators neptus instance or from his own running instance of neptus.",
+                  "mitigation": "All activity on neptus and the LAUV is logged."
                 },
                 {
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "title": "Read information on neptus",
-                  "description": "Attacker may gain access to machine/neptus and read data.",
-                  "mitigation": "Elevate privilege level to access data/neptus on machine."
+                  "description": "Currently, an attacker can run his own instance of neptus and see all activity from the vehicles.",
+                  "mitigation": "Only allow authenticated entities to connect to the vehicles."
                 }
               ],
               "attrs": {
