@@ -30,10 +30,10 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Physically access data on CPU",
                   "type": "Information disclosure",
-                  "description": "An attacker can physically extract sensitive data from the CPU.",
+                  "description": "An attacker can extract sensitive data from the CPU by physically accessing the device.",
                   "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
                 },
                 {
@@ -44,6 +44,15 @@
                   "severity": "High",
                   "description": "Attacker can load his own instance of DUNE onto the device featuring malicious firmware.",
                   "mitigation": "Only boot/execute authenticated firmware."
+                },
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic spoofing threat",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Attacker can replace the original CPU with his own with malicious software.",
+                  "mitigation": "Rely on hardware authentication."
                 }
               ],
               "attrs": {
@@ -74,37 +83,30 @@
               "hasOpenThreats": true,
               "threats": [
                 {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "SSH into application",
-                  "description": "An attacker is able to log into the application and might control and monitor all the data",
-                  "type": "Elevation of privilege",
-                  "mitigation": "Restrict ssh access by IP Address (during operation)"
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "title": "Load malicious firmware",
-                  "type": "Tampering",
-                  "description": "By gaining access to the vehicle, the attacker could upload malicious firmware onto the auxiliary cpu causing it to fail or send faulty data.",
-                  "mitigation": "Allow vehicle to only load verified firmware."
-                },
-                {
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "An attacker can physically extract sensitive data from the CPU.",
-                  "title": "Physically access data on CPU",
-                  "type": "Information disclosure",
-                  "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
-                },
-                {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic spoofing threat",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Attacker can replace the original CPU with his own with malicious software.",
+                  "mitigation": "Rely on hardware authentication."
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
                   "title": "Generic tampering threat",
                   "type": "Tampering",
                   "status": "Open",
                   "severity": "High",
-                  "description": "Attacker can replace the whole device or load his own instance of DUNE onto the device featuring malicious firmware.",
-                  "mitigation": "Use hardware authentication.\nOnly boot authenticated firmware."
+                  "description": "Attacker can load his own instance of DUNE onto the device featuring malicious firmware.",
+                  "mitigation": "Only boot/execute authenticated firmware."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Physically access data on CPU",
+                  "type": "Information disclosure",
+                  "description": "An attacker can extract sensitive data from the CPU by physically accessing the device.",
+                  "mitigation": "Encrypt data stored on the device and store sensitive data like keys in secure storage."
                 }
               ],
               "attrs": {
