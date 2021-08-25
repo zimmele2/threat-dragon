@@ -1259,6 +1259,14 @@
                   "severity": "Medium",
                   "description": "Attacker jamms the acoustic network and cuts communication to the vehicle.",
                   "mitigation": "Spread spectrum techniques, multi-frequency communications. lower duty cycle, strong forward error correction codes."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Packet sniffing",
+                  "description": "Any attacker with an acoustic module can eavesdrop on the messages and get access to sensitive data.",
+                  "mitigation": "Encrypt messages.",
+                  "type": "Information disclosure"
                 }
               ],
               "attrs": {
