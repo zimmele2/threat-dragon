@@ -547,6 +547,14 @@
                   "type": "Tampering",
                   "description": "An attacker intercepts the acoustic connection and inject false messages, compromising the integrity.",
                   "mitigation": "Authenticate and encrypt messages."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Packet sniffing",
+                  "type": "Information disclosure",
+                  "description": "Any attacker with an acoustic module can eavesdrop on the messages and get access to sensitive data.",
+                  "mitigation": "Encrypt messages."
                 }
               ],
               "attrs": {
