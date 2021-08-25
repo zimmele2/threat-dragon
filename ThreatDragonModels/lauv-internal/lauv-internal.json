@@ -417,7 +417,7 @@
                   "status": "Open",
                   "severity": "Low",
                   "description": "A generic tampering threat",
-                  "mitigation": "Authenticate and encrypt messages."
+                  "mitigation": "Authenticate and encrypt messages.\nSecure state estimation. Use the inputs from other sensors to estimate the accuracy of the potentially faulty sensors."
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
@@ -510,8 +510,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.741905734360772,
-                    "offset": -1.7975400964785861
+                    "distance": 0.7207095796241968,
+                    "offset": 0.6562549684814211
                   },
                   "attrs": {
                     "text": {
@@ -523,13 +523,41 @@
                 }
               ],
               "z": 50,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic tampering threat",
+                  "mitigation": "Authenticate and encrypt messages.\nSecure state estimation. Use the inputs from other sensors to estimate the accuracy of the potentially faulty sensors."
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic information disclosure threat",
+                  "mitigation": "Encrypt messages."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "A generic DoS threat"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -831,7 +859,7 @@
                   "status": "Open",
                   "severity": "Low",
                   "description": "A generic tampering threat",
-                  "mitigation": "Authenticate and encrypt messages."
+                  "mitigation": "Authenticate and encrypt messages.\nSecure state estimation. Use the inputs from other sensors to estimate the accuracy of the potentially faulty sensors."
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
