@@ -1480,7 +1480,7 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy   of the potentially faulty sensors.",
+                  "mitigation": "Secure state estimation. Use the inputs from other sensors to estimate the accuracy of the potentially faulty sensors.",
                   "type": "Repudiation",
                   "title": "GPS spoofing",
                   "description": "Spoof GPS data in terms of location and/or time."
