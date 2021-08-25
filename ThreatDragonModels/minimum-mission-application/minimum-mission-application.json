@@ -875,11 +875,11 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 400,
-                "y": 260
+                "x": 399,
+                "y": 265
               },
               "target": {
-                "x": 400,
+                "x": 402,
                 "y": 410
               },
               "vertices": [
@@ -1505,6 +1505,27 @@
                   "class": "element-text hasOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 191,
+                "y": 267
+              },
+              "target": {
+                "x": 189,
+                "y": 418
+              },
+              "vertices": [
+                {
+                  "x": 205,
+                  "y": 341
+                }
+              ],
+              "id": "602c8d54-382b-4144-9cde-11effdbbf071",
+              "z": 65,
+              "attrs": {}
             }
           ]
         },
