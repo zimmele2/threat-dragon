@@ -923,7 +923,7 @@
                   "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "sensor"
+                  "text": "sensors"
                 },
                 ".element-text": {
                   "class": "element-text hasOpenThreats isInScope"
