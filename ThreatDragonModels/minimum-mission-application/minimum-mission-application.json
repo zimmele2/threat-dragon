@@ -872,27 +872,6 @@
               }
             },
             {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 399,
-                "y": 265
-              },
-              "target": {
-                "x": 402,
-                "y": 410
-              },
-              "vertices": [
-                {
-                  "x": 420,
-                  "y": 340
-                }
-              ],
-              "id": "ca252edb-3292-44b0-9a0f-28bef40f9eeb",
-              "z": 30,
-              "attrs": {}
-            },
-            {
               "type": "tm.Process",
               "size": {
                 "width": 100,
@@ -1379,90 +1358,6 @@
               }
             },
             {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 670,
-                "y": 210
-              },
-              "target": {
-                "x": 910,
-                "y": 210
-              },
-              "vertices": [
-                {
-                  "x": 791,
-                  "y": 234
-                }
-              ],
-              "id": "ae1cb722-7d88-4fe3-b88f-fb9e37b39939",
-              "z": 60,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 884,
-                "y": 459
-              },
-              "target": {
-                "x": 692,
-                "y": 460
-              },
-              "vertices": [
-                {
-                  "x": 790,
-                  "y": 429
-                }
-              ],
-              "id": "72c42684-0da8-4400-8a30-9af92d930fb3",
-              "z": 61,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 477,
-                "y": 458
-              },
-              "target": {
-                "x": 670,
-                "y": 460
-              },
-              "vertices": [
-                {
-                  "x": 571,
-                  "y": 434
-                }
-              ],
-              "id": "8ea05898-9602-46b1-bbc1-828de424cc4b",
-              "z": 62,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 620,
-                "y": 270
-              },
-              "target": {
-                "x": 620,
-                "y": 410
-              },
-              "vertices": [
-                {
-                  "x": 640,
-                  "y": 340
-                }
-              ],
-              "id": "d86a13aa-7939-4a8a-b6a2-a49de33eb54b",
-              "z": 63,
-              "attrs": {}
-            },
-            {
               "type": "tm.Actor",
               "size": {
                 "width": 160,
@@ -1505,27 +1400,6 @@
                   "class": "element-text hasOpenThreats isInScope"
                 }
               }
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 191,
-                "y": 267
-              },
-              "target": {
-                "x": 189,
-                "y": 418
-              },
-              "vertices": [
-                {
-                  "x": 205,
-                  "y": 341
-                }
-              ],
-              "id": "602c8d54-382b-4144-9cde-11effdbbf071",
-              "z": 65,
-              "attrs": {}
             }
           ]
         },
