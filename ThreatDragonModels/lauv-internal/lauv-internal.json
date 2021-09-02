@@ -60,7 +60,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat"
+                  "description": "Generic repudiation threat",
+                  "mitigation": "All activity is logged on either the main/auxiliary CPU or the external data store."
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
@@ -70,14 +71,6 @@
                   "severity": "Medium",
                   "description": "Flood DUNE application and make application unresponsive.",
                   "mitigation": "Limit response to invalid messages."
-                },
-                {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic elevation threat. Only one privilege level."
                 }
               ],
               "attrs": {
@@ -139,15 +132,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat"
-                },
-                {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic elevation threat. Only one privilege level."
+                  "description": "Generic repudiation threat",
+                  "mitigation": "All activity is logged on the"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
@@ -268,18 +254,10 @@
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
                   "title": "Generic spoofing threat",
                   "type": "Spoofing",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Medium",
                   "description": "Attacker replaces switch with his own switch logging all transferred data.",
                   "mitigation": "Encrypt messages."
-                },
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic tampering threat"
                 },
                 {
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
@@ -287,7 +265,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat"
+                  "description": "Generic repudiation threat",
+                  "mitigation": "All activity is logged on either the main/auxiliary CPU or the external data store."
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
@@ -297,14 +276,6 @@
                   "severity": "Medium",
                   "description": "Attacker replaces switch with his own switch logging all transferred data.",
                   "mitigation": "Encrypt messages."
-                },
-                {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic elevation threat"
                 }
               ],
               "attrs": {
@@ -560,7 +531,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat"
+                  "description": "Generic repudiation threat",
+                  "mitigation": "All collected data is logged on either the main/auxiliary CPU or the external data store."
                 }
               ],
               "attrs": {
@@ -744,7 +716,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat"
+                  "description": "Generic repudiation threat",
+                  "mitigation": "All collected data is logged on either the main/auxiliary CPU or the external data store."
                 }
               ],
               "attrs": {
@@ -851,7 +824,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat"
+                  "description": "Generic repudiation threat",
+                  "mitigation": "All collected data is logged on either the main/auxiliary CPU or the external data store."
                 }
               ],
               "attrs": {
@@ -878,7 +852,7 @@
               "vertices": [
                 {
                   "x": 900,
-                  "y": 620
+                  "y": 610
                 }
               ],
               "id": "d0456fc8-1e29-4636-83a6-91ffe3cdf832",
