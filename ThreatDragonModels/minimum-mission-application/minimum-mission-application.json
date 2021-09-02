@@ -193,7 +193,7 @@
                   "title": "Generic informtion disclosure threat",
                   "type": "Information disclosure",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Attacker might be able to read the collected data on the LAUV.",
                   "mitigation": "Various mitigations. See detailed threat model for LAUV for more information."
                 }
@@ -330,7 +330,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "title": "Packet sniffing",
                   "type": "Information disclosure",
@@ -338,7 +338,7 @@
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Tampering",
                   "title": "Man in the middle attack",
                   "description": "Attacker may tamper the sent data.",
@@ -398,7 +398,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Man in the middle attack",
                   "description": "Attacker may tamper the sent data.",
                   "mitigation": "Provide integrity and encryption for messages.",
@@ -406,7 +406,7 @@
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Packet sniffing",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "mitigation": "Encrypt messages",
@@ -466,7 +466,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Attacker may tamper the sent data.",
                   "title": "Man in the middle attack",
                   "type": "Tampering",
@@ -474,7 +474,7 @@
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Packet sniffing",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
                   "type": "Information disclosure",
@@ -534,7 +534,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Man in the middle attack",
                   "type": "Tampering",
                   "description": "An attacker intercepts the acoustic connection and inject false messages, compromising the integrity.",
@@ -542,7 +542,7 @@
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Packet sniffing",
                   "type": "Information disclosure",
                   "description": "Any attacker with an acoustic module can eavesdrop on the messages and get access to sensitive data.",
@@ -840,7 +840,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "type": "Information disclosure",
                   "title": "Access router",
                   "description": "Attacker manages to log into the router on the manta and view network credentials.",
@@ -869,7 +869,7 @@
                   "title": "Generic tampering threat",
                   "type": "Tampering",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Attacker can connect to the manta and change the application code.",
                   "mitigation": "Authenticate all entities that want to connect to the manta."
                 },
@@ -992,7 +992,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Man in the middle attack",
                   "type": "Information disclosure",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
@@ -1000,7 +1000,7 @@
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Packet sniffing",
                   "type": "Information disclosure",
                   "description": "An attacker intercepts the Wifi connection and gets access to sensitive data like mission plans",
@@ -1146,7 +1146,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Man in the middle attack",
                   "type": "Tampering",
                   "description": "An attacker intercepts the acoustic connection and inject false messages, compromising the integrity.",
@@ -1163,7 +1163,7 @@
                 },
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "title": "Packet sniffing",
                   "description": "Any attacker with an acoustic module can eavesdrop on the messages and get access to sensitive data.",
                   "mitigation": "Encrypt messages.",
