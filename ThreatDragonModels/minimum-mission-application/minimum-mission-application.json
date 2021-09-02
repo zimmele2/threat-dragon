@@ -196,14 +196,6 @@
                   "severity": "Medium",
                   "description": "Attacker might be able to read the collected data on the LAUV.",
                   "mitigation": "Various mitigations. See detailed threat model for LAUV for more information."
-                },
-                {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic elevation threat. Only one privilege level."
                 }
               ],
               "attrs": {
@@ -692,15 +684,6 @@
                   "type": "Denial of service",
                   "description": "DoS attack on gsm network. Out of scope because the mobile network is not managed by LSTS.",
                   "mitigation": ""
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic information disclosure threat.",
-                  "mitigation": "UMTS provides confidentiality."
                 }
               ],
               "isEncrypted": true,
