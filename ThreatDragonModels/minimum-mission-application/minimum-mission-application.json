@@ -889,14 +889,6 @@
                   "mitigation": "Authenticate manta instances with hardware credentials."
                 },
                 {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic elevation threat. Only one privilege level."
-                },
-                {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
                   "title": "Generic DoS threat",
                   "type": "Denial of service",
