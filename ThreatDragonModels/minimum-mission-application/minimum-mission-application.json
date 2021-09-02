@@ -920,7 +920,8 @@
                   "type": "Repudiation",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "description": "No generic repudiation threat. All activity is logged on the manta and reported to neptus."
+                  "description": "Generic repudiation threat.",
+                  "mitigation": "All activity is logged on the manta and reported to neptus."
                 }
               ],
               "attrs": {
