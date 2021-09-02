@@ -1081,7 +1081,7 @@
                   "title": "Generic tampering threat",
                   "type": "Tampering",
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "description": "A generic tampering threat",
                   "mitigation": "Authenticate and encrypt messages."
                 },
@@ -1090,7 +1090,7 @@
                   "title": "Generic informtion disclosure threat",
                   "type": "Information disclosure",
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "description": "A generic information disclosure threat.",
                   "mitigation": "Encrypt messages."
                 },
@@ -1099,7 +1099,7 @@
                   "title": "Generic DoS threat",
                   "type": "Denial of service",
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "description": "A generic DoS threat."
                 }
               ],
