@@ -608,22 +608,6 @@
                   "mitigation": "End-to-end message encryption",
                   "type": "Information disclosure",
                   "title": "Packet sniffing"
-                },
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic tampering threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Mitigated",
-                  "severity": "Medium",
-                  "description": "No generic DoS threat"
                 }
               ],
               "attrs": {
